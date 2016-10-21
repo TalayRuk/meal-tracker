@@ -6,7 +6,7 @@
 
 ## Description
 
-#### _Create a website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. Use the GitHub API to retrieve this information._
+#### _Create a meal tracking application. Users can log foods they've eaten each day, including details about the meal and its number of calories. You may assume foods being logged are for a single day ._
 
 #### Wants:
 1. Log a food eaten in a day by submitting a form w/ food name, calories & details.
