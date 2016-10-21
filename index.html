@@ -24,3 +24,18 @@
     <my-app>Loading...</my-app>
   </body>
 </html>
+
+<div class="container">
+  <!-- add nav bar -->
+  <div class="jumbotron">
+    <h1>Meal Tracker</h1>
+    <h3 *ngFor="let currentMeal of meals">{{ currentMeal.name}}</h3>
+  </div>
+
+</div>
+
+<div *ngFor="let currentMeal of childMealList">
+  <h3>{{ currentMeal.name }}</h3>
+  <button (click)="editButtonClicked"> Edit this meal </button>
+  
+</div>

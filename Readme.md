@@ -3,7 +3,7 @@
 #### _by Vichitra Pool (Note) October 21st, 2016_
 
 #### Wants:
-1. Log a food eaten by submitting a form w/ food name, calories & details.
+1. Log a food eaten by submitting a form w/ food name, calories & details.(properties)
 2. View a list of foods I have logged.
 3. Options to view all foods,
     - only high-calorie foods (less than 500 calories)
