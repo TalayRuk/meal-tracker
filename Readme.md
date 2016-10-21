@@ -57,7 +57,7 @@ _Copyright (c) 2016 Vichitra Pool at Epicodus_
 3. Add a property that records when each food was eaten. The user could enter a date and time, or the app can generate a timestamp.
 4. Expand the application to display multiple days of food logs. Group the food entries by day. Then include a component to display the total calories for whichever day the user selects.
 5. Add a new master component to average the total calories consumed per day so that the user can figure out how much exercise they should be getting on a regular basis.
-
+6. Add Graph for the calories intake
 #### Review for:
 - Is the app structured in a logical way, including a model, multiple components and TypeScript? (Interfaces are not required).
 - Can the application create and edit new instances of a model?

@@ -7,3 +7,6 @@ import { Food } from './food.model';
 
   `
 })
+
+export FoodListComponent {}
+constructor(public name: string, public calories: number, public details: string, public id: number) { }
