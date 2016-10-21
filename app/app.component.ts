@@ -10,5 +10,6 @@ import { Component } from '@angular/core';
 })
 
 export AppComponent {
-  
+  public mainT
+
 }
