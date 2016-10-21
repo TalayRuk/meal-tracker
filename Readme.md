@@ -18,15 +18,14 @@
 
 ## Setup/Installation Requirements
 1.  Open PowerShell
-2.  $ git clone https://GitHub.com/TalayRuk/GitHub-UserLookup.git
-3.  $ cd GitHub-User-Lookup
-4.  $ npm bower install -g
-5.  $ bower init
-6.  $ npm install
-7.  $ bower install
-8.  $ npm install gulp-sass gulp-sourcemaps --save-dev
-9.  $ gulp build --production
-10. $ gulp serve
+2.  $ git clone https://GitHub.com/TalayRuk/meal-tracker.git
+3.  $ cd meal-tracker
+4.  $ bower init
+5.  $ npm install
+6.  $ bower install
+7.  $ npm install gulp-sass gulp-sourcemaps --save-dev
+8.  $ gulp build --production
+9.  $ gulp serve
 
 ## Known Bugs
 _none_
