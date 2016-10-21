@@ -6,19 +6,21 @@ import { Food } from './food.model';
   template: `
   <div *ngFor="let currentFood of childFoodList"> <!--Instead of food since that change to childFoodList below -->
       <h3>{{ currentFood.name }}</h3>
-      <button (click)="editFoodClicked(currentFood)">Edit Food</button>
+      <button (click)="
+      editFoodClicked(currentFood)">Edit Food</button>
   </div>
 
   `
 })
 
-export FoodListComponent {
-  //view Food inputted, we already put food to MasterFood @ app.component now we just need to write references;
+export class FoodListComponent {
+  //view Food inputted, we already put food to masterFood @ app.component now we just need to write references;
   @Input() childFoodList: Food[];
-  @Output() clickSender: new EventEmitter();
+  @Output() clickSender = new EventEmitter();
   //add edit food to the food list
   editFoodClicked(foodToEdit: Food) {
-    this.clickSender.emit(foodToEdit);
+    //sends the string "currentFood" to the parent.
+    this.clickSender.emit(foodToEdit);//(food to send )
   }
 
 }

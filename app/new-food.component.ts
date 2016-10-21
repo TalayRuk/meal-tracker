@@ -48,11 +48,11 @@ import { Food } from './food.model';
   `
 })
 
-export NewFoodComponent {
+export class NewFoodComponent {
   @Output() newFoodSender = new EventEmitter();
   addFoodClicked(name: string, calories: number, details: string, id: number) {
-    var addNewFood: Food = new Food(name, calories, details, id);
-    this.newFoodSender.emit(addNewFood);
+    var newFood: Food = new Food(name, calories, details, id);
+    this.newFoodSender.emit(newFood);
     //we have to send our addNewFood up to App Component where we're keeping the rest of our foods, & add it to the array where it can be displayed & edited by our other components. So we need to create an output for it. Let's call it NewFoodSender. We'll emit the new food object when we click the add button in our addFoodClicked method, right after we've created the object.
     //Why can't we just sending the values up to the App Component? B/c event emitters are 1 lane bridges.
     //We can only send 1 argument at a time, so if we have multiple pieces of information to send btwn components we have to either bundle them up in an object or an array. So, we should construct our new food object here & then send it. B/c NewFoodComponent job is to create new foods.
