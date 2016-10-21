@@ -1,14 +1,55 @@
 # Meal Tracker
 
+#### Week2: Angular 2 JS App Independent Project
+
 #### _by Vichitra Pool (Note) October 21st, 2016_
 
+## Description
+
+#### _Create a meal tracking application. Users can log foods they've eaten each day, including details about the meal and its number of calories. You may assume foods being logged are for a single day ._
+
 #### Wants:
+<<<<<<< HEAD
 1. Log a food eaten by submitting a form w/ food name, calories & details.(properties)
+=======
+1. Log a food eaten in a day by submitting a form w/ food name, calories & details.
+>>>>>>> e3dcdecfc131a306617f5ab3edfc279bc46819de
 2. View a list of foods I have logged.
 3. Options to view all foods,
     - only high-calorie foods (less than 500 calories)
     - or only lower-calorie foods (less than 500 calories)
 4. Click a food to edit its NAME, DETAILS, OR CALORIES.
+
+## Setup/Installation Requirements
+1.  Open PowerShell
+2.  $ git clone https://GitHub.com/TalayRuk/meal-tracker.git
+3.  $ cd meal-tracker
+4.  $ bower init
+5.  $ npm install
+6.  $ bower install
+7.  $ npm install gulp-sass gulp-sourcemaps --save-dev
+8.  $ gulp build --production
+9.  $ gulp serve
+
+## Known Bugs
+_none_
+
+## Support and contact details
+_Please contact the authors if you have any questions or comments._
+
+## Technologies Used
+
+HTML, CSS, JavaScript, Node.js, Npm & Gulp, Bower & Sass, TypeScript, Angular 2
+
+
+## License
+
+_*MIT Creative Commons*_
+
+_Copyright (c) 2016 Vichitra Pool at Epicodus_
+
+
+
 
 #### Wishes:
 1. Custom SASS styling with corresponding Gulp tasks to compile.
