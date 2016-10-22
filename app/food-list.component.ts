@@ -5,13 +5,15 @@ import { Food } from './food.model';
   selector: 'food-list',
   template: `
     <div class="box">
-      <h2> Your Food Intake Today </h2>
+      <h2> View Your Food Intake Today </h2>
+      <h3>
       <select (change)="onChange($event.target.value)">
         <option value="all">Show All</option>
         <option value="high">Show Food Over 499 calories</option>
         <option value="Low" selected="selected">Show Food Below 500 calories </option>
       </select>
-      <div *ngFor="let currentFood of childFoodList | showFoodList: selectedShowFoodList">
+      </h3>
+      <div *ngFor="let currentFood of childFoodList | foodIntake: selectedFoodIntake">
         <!--Instead of food since  that change to childFoodList *ngFor indicates Showing an array property; that the <li> element & its children constitute a master template = take each food in the childFoodList array, store it in the local currentFood variable, & make it available to the corresponding template instance.-->
         <h2>{{ currentFood.name }}  <a (click)="
         editFoodClicked(currentFood)">   Edit   </a>
@@ -30,9 +32,10 @@ export class FoodListComponent {
   @Input() childFoodList: Food[];
   @Output() clickSender = new EventEmitter();
   //add edit food to the food list
-  public selectedShowFoodList: string = "low";
+  public selectedFoodIntake: string = "low";
   onChange(optionFromMenu) {
-    this.selectedShowFoodList
+    this.selectedFoodIntake = optionFromMenu;
+    console.log(this.selectedFoodIntake);
   }
   editFoodClicked(foodToEdit: Food) {
     //sends the string "currentFood" to the parent.

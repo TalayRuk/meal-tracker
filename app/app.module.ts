@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FoodListComponent } from './food-list.component';
 import { NewFoodComponent } from './new-food.component';
 import { EditFoodComponent } from './edit-food.component';
-import { FoodIntakePipe } from './show-food-list.pipe';
+import { FoodIntakePipe } from './food-intake.pipe';
 
 @NgModule({
   imports: [

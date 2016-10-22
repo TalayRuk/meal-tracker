@@ -2,8 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Food } from './food.model';
 
 @Pipe({
-  name: "foodIntake"
-
+  name: "foodIntake",
+  pure: false
 })
 
 export class FoodIntakePipe implements PipeTransform {
