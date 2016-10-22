@@ -4,49 +4,43 @@ import { Food } from './food.model';
 @Component({
   selector: 'new-food',
   template: `
-  <!--//////////////////////// Add new food /////////////////////-->
 
-  <h2>Hi, What did you eat today?: </h2>
-  <!--**Wish Add Name after Hi from prompt -->
-  <div>
-    <h3><label>Enter Your Food Here: </label>
-    <input #newName></h3>
-    <!--created local variable to hold its HTML input tag
-    **WISH Add drop down Meal: Breakfast, Lunch, Dinner, Dessert, Snacks, Drinks-->
-  </div>
-  <div>
-    <h3><label>Enter Food Calories: </label>
-    <input #newCalories></h3>
-    <h3><a href="http://caloriescount.com/foodcalculator.aspx?AspxAutoDetectCookieSupport=1">If you don't know, Click here to find out the calories!</a></h3>
+    <h2>Hello, What did you eat today?: </h2>
+    <!--**Wish Add Name after Hi from prompt -->
+    <div>
+      <h3><label>Enter Your Food Here: </label>
+      <input #newName></h3>
+      <!--created local variable to hold its HTML input tag
+      **WISH Add drop down Meal: Breakfast, Lunch, Dinner, Dessert, Snacks, Drinks-->
+    </div>
+    <div>
+      <h3><label>Enter Food Calories: </label>
+      <input #newCalories></h3>
+      <h3><a href="http://caloriescount.com/foodcalculator.aspx?AspxAutoDetectCookieSupport=1">If you don't know, Click here to find out the calories!</a></h3>
 
-    <!--created local variable to hold its HTML input tag
-    **WISH add Food API to get the calories or add link to find out how much calories is the food http://opendata.stackexchange.com/questions/269/open-api-for-nutritional-information-and-or-food-barcodes-->
-  </div>
-  <div>
-    <h3><label>Add Your Food Details Here: </label>
-    <input #newDetails></h3>
-    <!--created local variable to hold its HTML input tag
-    **WISH Add drop down Meal: Breakfast, Lunch, Dinner, Dessert, Snacks, Drinks-->
-  </div>
-  <div>
-    <!--<h3><label>Enter Food ID:</label>
-    <input #newId></h3>-->
-
-    <button (click)="addFoodClicked(newName.value, newCalories.value, newDetails.value, newId.value);
-    newName.value='';
-    newCalories.value='';
-    newDetails.value='';
-    newId.value='';
-    ">Add New Food</button>
-    <!-- get values typed into each field from input attach them to a click handler to the form's button. To trigger a method to add the new food, this will pass each input field's value into the method as an argument. ***Insert 2 commands inside of the double quotes on our button tag. It takes the form of (click)="doThing(); do AnotherThing(); setSomeVariable=3;" each command will run when there is a click event. We are setting both of the input values to blank strings. We break it down like below;
-    <button
-    (click)="
-    methodToRun();
-    anotherMethod();
-    variable='thing';
-    Then we close the quotes and the button tag:
-    ">Text for button</button> -->
-  </div>
+      <!--created local variable to hold its HTML input tag
+      **WISH add Food API to get the calories or add link to find out how much calories is the food http://opendata.stackexchange.com/questions/269/open-api-for-nutritional-information-and-or-food-barcodes-->
+    </div>
+    <div>
+      <h3><label>Add Your Food Details Here: </label>
+      <input #newDetails></h3>
+      <!--created local variable to hold its HTML input tag
+      **WISH Add drop down Meal: Breakfast, Lunch, Dinner, Dessert, Snacks, Drinks-->
+      <button class="btn-success btn-lg" (click)="addFoodClicked(newName.value, newCalories.value, newDetails.value);
+      newName.value='';
+      newCalories.value='';
+      newDetails.value='';
+      ">Add New Food</button>
+      <!-- get values typed into each field from input attach them to a click handler to the form's button. To trigger a method to add the new food, this will pass each input field's value into the method as an argument. ***Insert 2 commands inside of the double quotes on our button tag. It takes the form of (click)="doThing(); do AnotherThing(); setSomeVariable=3;" each command will run when there is a click event. We are setting both of the input values to blank strings. We break it down like below;
+      <button
+      (click)="
+      methodToRun();
+      anotherMethod();
+      variable='thing';
+      Then we close the quotes and the button tag:
+      ">Text for button</button> -->
+    </div>
+    
   `
 })
 

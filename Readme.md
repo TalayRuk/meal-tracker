@@ -9,11 +9,8 @@
 #### _Create a meal tracking application. Users can log foods they've eaten each day, including details about the meal and its number of calories. You may assume foods being logged are for a single day ._
 
 #### Wants:
-<<<<<<< HEAD
-1. Log a food eaten by submitting a form w/ food name, calories & details.(properties)
-=======
+
 1. Log a food eaten in a day by submitting a form w/ food name, calories & details.
->>>>>>> e3dcdecfc131a306617f5ab3edfc279bc46819de
 2. View a list of foods I have logged.
 3. Options to view all foods,
     - only high-calorie foods (less than 500 calories)
@@ -22,7 +19,7 @@
 
 ## Setup/Installation Requirements
 1.  Open PowerShell
-2.  $ git clone https://GitHub.com/TalayRuk/meal-tracker.git
+2.  $ git clone https://github.com/TalayRuk/meal-tracker.git
 3.  $ cd meal-tracker
 4.  $ bower init
 5.  $ npm install

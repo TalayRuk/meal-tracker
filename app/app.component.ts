@@ -18,7 +18,7 @@ import { Food } from './food.model';
         (clickSender)="showFood($event)"
       ></food-list>
       <div *ngFor="let currentFood of food">
-      <!-- loop showing array of food-->
+      <!-- loop showing array of food want to change button to just click link!-->
           <h3>{{ currentFood.name }}</h3>
           <button (click)="showFood(currentFood)">Edit</button>
       </div>
@@ -48,6 +48,7 @@ export class AppComponent {
   //   this.thing = null;
   // }
   public masterFoodList:  Food[] = [
+      //foreach *ngFor="List food added"
     /**Create a public property called food of type Food(the name of our Model class). We used the new keyword to instantiate a new Food with the description "Create food-list app." and an id of 0 --We changed public food: Food; property into an array of Food objects called foods. Then we display them in our template by creating a loop using the directive *ngFor which built into Angular They are speical keywords that you can use as attributes in HTML we now store data w/a model, store instances of that Model in a component, and display the data in a View by using the Controller Class(also called the Component Class).
     */
   ];
