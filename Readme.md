@@ -13,7 +13,7 @@
 1. Log a food eaten in a day by submitting a form w/ food name, calories & details.
 2. View a list of foods I have logged.
 3. Options to view all foods,
-    - only high-calorie foods (less than 500 calories)
+    - only high-calorie foods (over 500 calories)
     - or only lower-calorie foods (less than 500 calories)
 4. Click a food to edit its NAME, DETAILS, OR CALORIES.
 

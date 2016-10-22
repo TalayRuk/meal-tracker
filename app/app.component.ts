@@ -8,7 +8,7 @@ import { Food } from './food.model';
     <!-- add nav bar -->
     <div class="jumbotron">
       <h1>Meal Tracker</h1>
-      <!-- /////// add vdo?/img under?
+      <!-- /////// add /img under?
       If no food added show add new food, if there's already food show food list: <div *ngIf="thing">
       <h1>Thing is true and therefore it is displayed!</h1>
     </div>
