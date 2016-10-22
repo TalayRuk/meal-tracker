@@ -9,22 +9,24 @@ import { Food } from './food.model';
 export class FoodIntakePipe implements PipeTransform {
   transform(input: Food[], desiredCalories) {
     var output: Food[] = [];
-    for (var i = 0; i < input.length; i++) {
-      if (desiredCalories === "high") {
+    if (desiredCalories === "high") {
+      for (var i = 0; i < input.length; i++) {
         if(input[i].calories >= 500) {
           output.push(input[i]);
         }
-        return output;
-
-      } else if (desiredCalories === "low") {
-          if(input[i].calories < 500) {
-            output.push(input[i]);
-          }
-          return output;
-
-      } else {
-        return input;
       }
+      return output;
+
+    } else if (desiredCalories === "low") {
+      for (var i = 0; i < input.length; i++) {
+        if(input[i].calories < 500) {
+          output.push(input[i]);
+        }
+      }
+      return output;
+
+    } else {
+      return input;
     }
   }
 }

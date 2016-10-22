@@ -8,9 +8,9 @@ import { Food } from './food.model';
       <h2> View Your Food Intake Today </h2>
       <h3>
       <select (change)="onChange($event.target.value)">
-        <option value="all">Show All</option>
-        <option value="high">Show Food Over 499 calories</option>
-        <option value="Low" selected="selected">Show Food Below 500 calories </option>
+        <option value="all">Show All Food Intake</option>
+        <option value="high">Show Food High calories </option>
+        <option value="Low" selected="selected">Show Low calories Food below 500 </option>
       </select>
       </h3>
       <div *ngFor="let currentFood of childFoodList | foodIntake: selectedFoodIntake">
