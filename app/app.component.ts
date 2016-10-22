@@ -21,18 +21,18 @@ import { Food } from './food.model';
       <!-- loop showing array of food-->
           <h3>{{ currentFood.name }}</h3>
           <button (click)="showFood(currentFood)">Edit</button>
-        </div>
-        <!-- /////// edit-food
-        <edit-food
-          [childSelectedFood]="selectedFood"
-          (doneClickedSender)="finishedEditing()"
-        ></edit-food>-->
-        <!-- add new food -->
-        <new-food
-          (newFoodSender)="addFood($event)"
-        ><new-food> <!--from new-food.component.ts & also add trigger method called addFood that we'll declare next. addFood method's job will be to add the food to the array sending a food object along our newFoodSender bridge, we use the $event keyword to signify that our addFood method will be receiving an argument.-->
-
       </div>
+      <!-- /////// edit-food
+      <edit-food
+        [childSelectedFood]="selectedFood"
+        (doneClickedSender)="finishedEditing()"
+      ></edit-food> -->
+      <!-- add new food -->
+      <new-food
+        (newFoodSender)="addFood($event)"
+      ></new-food> <!--from new-food.component.ts & also add trigger method called addFood that we'll declare next. addFood method's job will be to add the food to the array sending a food object along our newFoodSender bridge, we use the $event keyword to signify that our addFood method will be receiving an argument.-->
+
+    </div>
   </div>
 
 `

@@ -6,29 +6,31 @@ import { Food } from './food.model';
   template: `
   <!--//////////////////////// Add new food /////////////////////-->
 
-  <h1>Hi, What did you eat today?: </h1>
+  <h2>Hi, What did you eat today?: </h2>
   <!--**Wish Add Name after Hi from prompt -->
   <div>
-    <label>Enter Your Food Here: </label>
-    <input #newName>
+    <h3><label>Enter Your Food Here: </label>
+    <input #newName></h3>
     <!--created local variable to hold its HTML input tag
     **WISH Add drop down Meal: Breakfast, Lunch, Dinner, Dessert, Snacks, Drinks-->
   </div>
   <div>
-    <label>Enter Food Calories: </label>
-    <input #newCalories>
+    <h3><label>Enter Food Calories: </label>
+    <input #newCalories></h3>
+    <h3><a href="http://caloriescount.com/foodcalculator.aspx?AspxAutoDetectCookieSupport=1">If you don't know, Click here to find out the calories!</a></h3>
+
     <!--created local variable to hold its HTML input tag
-    **WISH add Food API to get the calories http://opendata.stackexchange.com/questions/269/open-api-for-nutritional-information-and-or-food-barcodes-->
+    **WISH add Food API to get the calories or add link to find out how much calories is the food http://opendata.stackexchange.com/questions/269/open-api-for-nutritional-information-and-or-food-barcodes-->
   </div>
   <div>
-    <label>Add Your Food Details Here: </label>
-    <input #newDetails>
+    <h3><label>Add Your Food Details Here: </label>
+    <input #newDetails></h3>
     <!--created local variable to hold its HTML input tag
     **WISH Add drop down Meal: Breakfast, Lunch, Dinner, Dessert, Snacks, Drinks-->
   </div>
   <div>
-    <label>Enter Food ID:</label>
-    <input #newId>
+    <!--<h3><label>Enter Food ID:</label>
+    <input #newId></h3>-->
 
     <button (click)="addFoodClicked(newName.value, newCalories.value, newDetails.value, newId.value);
     newName.value='';
