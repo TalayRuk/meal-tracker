@@ -14,7 +14,7 @@ import { EditFoodComponent } from './edit-food.component';
   declarations: [
     AppComponent,
     FoodListComponent,
-    NewFoodComponent,     
+    NewFoodComponent,
     EditFoodComponent
   ],
   bootstrap: [ AppComponent ]

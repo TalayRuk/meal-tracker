@@ -8,16 +8,23 @@ import { Food } from './food.model';
       <!-- *ngIf="condition" evaluates to a false value then the element is removed from the DOM -->
       <h2>Edit this Food</h2>
       <div>
-        <label>Edit Name: </label>
-        <input [(NgModule)]="childSelectedFood.name">
+        <h3>
+          <label>Edit Name: </label>
+          <input [(ngModel)]="childSelectedFood.name">
+          <!-- ngModel directive binds an input, select, textarea or custom form control to a property on the scope using ngModelController. Resposible for: binding the view into the model-->
+        </h3>
       </div>
       <div>
-        <label>Edit Calories: </label>
-        <input [(NgModule)]="childSelectedFood.calories">
+        <h3>
+          <label>Edit Calories: </label>
+          <input [(ngModel)]="childSelectedFood.calories">
+        </h3>
       </div>
       <div>
-        <label>Edit details: </label>
-        <input [(NgModule)]="childSelectedFood.details">
+        <h3>
+          <label>Edit details: </label>
+          <input [(ngModel)]="childSelectedFood.details">
+        </h3>
         <button class="btn-success btn-lg" (click)="editedClicked()
         ">Edit Food</button>
       </div>

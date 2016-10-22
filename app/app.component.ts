@@ -8,7 +8,8 @@ import { Food } from './food.model';
     <!-- add nav bar -->
     <div class="jumbotron">
       <h1>Meal Tracker</h1>
-      <!-- /////// If no food added show add new food, if there's already food show food list: <div *ngIf="thing">
+      <!-- /////// add vdo?/img under?
+      If no food added show add new food, if there's already food show food list: <div *ngIf="thing">
       <h1>Thing is true and therefore it is displayed!</h1>
     </div>
     <button (click)="show()">SHOW</button>
@@ -19,16 +20,17 @@ import { Food } from './food.model';
       ></food-list>
       <div *ngFor="let currentFood of food">
       <!-- loop showing array of food want to change button to just click link!-->
-          <h3>{{ currentFood.name }}</h3>
+          <h2>{{ currentFood.name }}</h2>
           <button (click)="showFood(currentFood)">Edit</button>
       </div>
-      <new-food
-        (newFoodSender)="addFood($event)"
-      ></new-food> <!--from new-food.component.ts & also add trigger method called addFood that we'll declare next. addFood method's job will be to add the food to the array sending a food object along our newFoodSender bridge, we use the $event keyword to signify that our addFood method will be receiving an argument.-->
       <edit-food
         [childSelectedFood]="selectedFood"
         (editedClickedSender)="finishedEditing()"
       ></edit-food>
+      <hr>
+      <new-food
+        (newFoodSender)="addFood($event)"
+      ></new-food> <!--from new-food.component.ts & also add trigger method called addFood that we'll declare next. addFood method's job will be to add the food to the array sending a food object along our newFoodSender bridge, we use the $event keyword to signify that our addFood method will be receiving an argument.-->
 
     </div>
   </div>
@@ -58,7 +60,7 @@ export class AppComponent {
   //edit food
   finishedEditing() {
     this.selectedFood = null;
-  }  
+  }
   //Declare new food
   addFood(newFoodFromChild: Food) {
     this.masterFoodList.push(newFoodFromChild);

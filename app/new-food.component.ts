@@ -6,6 +6,7 @@ import { Food } from './food.model';
   template: `
 
     <h2>Hello, What did you eat today?: </h2>
+    <hr>
     <!--**Wish Add Name after Hi from prompt -->
     <div>
       <h3><label>Enter Your Food Here: </label>
@@ -40,7 +41,7 @@ import { Food } from './food.model';
       Then we close the quotes and the button tag:
       ">Text for button</button> -->
     </div>
-    
+
   `
 })
 
