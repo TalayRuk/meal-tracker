@@ -8,9 +8,9 @@ import { Food } from './food.model';
       <h2> View Your Food Intake Today </h2>
       <h3>
       <select (change)="onChange($event.target.value)">
-        <option value="all">Show All Food Intake</option>
+        <option value="all" selected="selected">Show All Food Intake</option>
         <option value="high">Show Food High calories </option>
-        <option value="Low" selected="selected">Show Low calories Food below 500 </option>
+        <option value="low">Show Low calories Food below 500 </option>
       </select>
       </h3>
       <div *ngFor="let currentFood of childFoodList | foodIntake: selectedFoodIntake">
@@ -32,7 +32,7 @@ export class FoodListComponent {
   @Input() childFoodList: Food[];
   @Output() clickSender = new EventEmitter();
   //add edit food to the food list
-  public selectedFoodIntake: string = "low";
+  public selectedFoodIntake: string = "";//when it not set as "high" or "low" it'll always show "all" even if not specify anything in the string. That's b/c I only define the low & high specifically in the food-intake.pipe.
   onChange(optionFromMenu) {
     this.selectedFoodIntake = optionFromMenu;
     console.log(this.selectedFoodIntake);

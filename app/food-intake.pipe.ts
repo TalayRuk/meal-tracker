@@ -25,7 +25,7 @@ export class FoodIntakePipe implements PipeTransform {
       }
       return output;
 
-    } else {
+    } else {//show everything
       return input;
     }
   }
